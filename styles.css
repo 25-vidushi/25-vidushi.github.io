@@ -267,3 +267,9 @@ dialog input { width: 100%; padding: .55rem; background: var(--paper); border: 1
   .tools { gap: 0; }
 }
 @media (prefers-reduced-motion: reduce) { .contact-go,.contact-links li,.cv-download { transition: none; } .cv-download:hover { transform: none; } }
+/* Phones: thumb-sized targets for standalone links, and a non-sticky header on short landscape screens */
+@media (pointer: coarse), (max-width: 760px) {
+  footer a, footer .profiles a, .section-heading a, .org-link, .degree-main .org-link { display: inline-flex; align-items: center; min-height: 2.75rem; }
+  footer .profiles { gap: 1.25rem; }
+}
+@media (max-height: 500px) and (orientation: landscape) { .masthead { position: static; } html { scroll-padding-top: 1rem; } }
