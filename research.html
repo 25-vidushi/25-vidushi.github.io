@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="preload" href="assets/fonts/newsreader.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="assets/fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="favicon.svg" type="image/svg+xml"><meta name="theme-color" content="#f9faf5">
+<meta property="og:title" content="Research · Vidushi Agarwal"><meta property="og:description" content="Vidushi Agarwal’s research on language model updates, biosignals, and machine learning systems."><meta property="og:type" content="website"><meta property="og:site_name" content="Vidushi Agarwal"><meta property="og:image" content="https://25-vidushi.github.io/assets/vidushi.jpg">
+<title>Research · Vidushi Agarwal</title><meta name="description" content="Vidushi Agarwal’s research on language model updates, biosignals, and machine learning systems.">
+<script>try{const t=localStorage.getItem('theme');document.documentElement.dataset.theme=t||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light')}catch{}</script>
+<link href="styles.css?v=13" rel="stylesheet"><script src="site.js?v=13" defer></script></head>
+<body><a class="skip" href="#main">Skip to content</a><header class="masthead"><div class="wrap bar">
+  <a class="brand" href="index.html" aria-label="Vidushi Agarwal, home">Vidushi Agarwal</a>
+  <nav id="nav" aria-label="Main navigation">
+    <a href="index.html">About</a>
+    <a href="research.html" aria-current="page">Research</a>
+    <a href="experience.html">Experience</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="tools">
+    <a href="assets/vidushi-agarwal-cv.pdf" aria-label="Read CV (PDF)" title="Read CV (PDF)">CV</a>
+    <button id="search" aria-label="Search site" title="Search site (⌘/Ctrl K)"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6"/><path d="m15 15 5 5"/></svg></button>
+    <button id="theme" aria-label="Dark mode" title="Dark mode" aria-pressed="false"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path class="moon" d="M20.6 14A8.5 8.5 0 0 1 10 3.4 8.7 8.7 0 1 0 20.6 14Z"/><g class="sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></g></svg></button>
+  </div>
+</div></header>
+<main id="main" class="wrap research"><h1>Research</h1><p class="opening">I study how model updates change behavior, and how to tell when an apparent improvement generalizes.</p>
+<article class="study" id="p-distill"><div class="study-text"><div class="paper-head"><p class="meta">Representation Learning Lab, IISc Bengaluru · 2026 · Under review</p><h2>Repairing the trustworthiness of distilled language models</h2><p class="byline">Shubham Kumar, <strong>Vidushi Agarwal</strong>, A. P. Prathosh</p></div>
+<p>A compressed model can retain its teacher’s language ability while losing some of its truthfulness. We used text from a similar domain to guide a targeted repair when the original distillation corpus was unavailable.</p>
+<p>I proposed using EK-FAC to estimate curvature and designed the evaluation across pre-training and post-training distillation settings.</p>
+<aside class="note">The repair raised machine ethics by up to <strong>8.48%</strong> and truthfulness by up to <strong>6.10%</strong>, with at most a <strong>0.35%</strong> change in perplexity.</aside>
+<details><summary>Method and results</summary><div class="details-body"><p>We used a proximal Bregman response objective with a preference log-odds loss. I compared proxy corpora and measured both the targeted behavior and held-out perplexity across GPT-2 and Qwen students.</p><p>For Qwen 1.2B, the machine-ethics log-odds metric rose 8.48% over the distilled baseline while perplexity moved from 31.56 to 31.67. The trade-off varied by model. One GPT-2 setting had a 1.56% perplexity change.</p></div></details></div>
+<figure><a class="figure-link" href="assets/trustworthiness-repair.webp" aria-label="Open the repair diagram at full size"><img src="assets/trustworthiness-repair-800.webp" srcset="assets/trustworthiness-repair-800.webp 800w, assets/trustworthiness-repair.webp 1584w" sizes="(max-width: 760px) 100vw, 50vw" alt="Distillation and repair workflow. Proxy text estimates curvature, and preference pairs guide the update to the released student model." width="1584" height="960" decoding="async"></a><figcaption>Proxy text helps identify which weight changes would most disturb the student model.</figcaption></figure></article>
+<article class="study" id="p-bio"><div class="study-text"><div class="paper-head"><p class="meta">HCI–BCI Lab, IIT Kharagpur · Undergraduate thesis · 2023–2024</p><h2>Reading driver state from brain and heart signals</h2><p class="byline">Anushka Srivastava, <strong>Vidushi Agarwal</strong>, Prerana Kamlesh, Tutan Nama, Monalisa Sarma, Debasis Samanta</p></div>
+<p>I built a Unity driving simulator that recorded errors alongside EEG, ECG, and pulse signals. Our team used those recordings to estimate anxiety, attention, and mental workload during each drive.</p>
+<aside class="note">A six-model ensemble predicted anxiety with <strong>91.9%</strong> accuracy and attention with <strong>83.8%</strong> from EEG, ECG and pulse signals.</aside>
+<details><summary>Driving protocol and results</summary><div class="details-body"><p>Participants drove three routes with different demands. Post-drive questionnaires supplied reference labels for workload and anxiety. Driving errors informed the attention labels.</p></div></details></div>
+<figure><a class="figure-link" href="assets/driver-performance.webp" aria-label="Open the experiment diagram at full size"><img loading="lazy" src="assets/driver-performance-800.webp" srcset="assets/driver-performance-800.webp 800w, assets/driver-performance.webp 1600w" sizes="(max-width: 760px) 100vw, 50vw" alt="VR driving experiment. Six models combine EEG, ECG and pulse signals to estimate workload, anxiety and attention." width="1600" height="857" decoding="async"></a><figcaption>Each signal feeds one classical and one deep-learning model. The six vote on each driver state.</figcaption></figure></article></main>
+<footer class="wrap" id="contact"><div><h2>Contact</h2><a id="email-address" href="mailto:vidushiagarwal232@gmail.com">vidushiagarwal232@gmail.com</a> <button id="copy" type="button" aria-live="polite">Copy</button></div>
+<div class="profiles"><a href="assets/vidushi-agarwal-cv.pdf">CV (PDF)</a><a href="https://www.linkedin.com/in/vidushi-agarwal-va/">LinkedIn</a><a href="https://github.com/25-vidushi">GitHub</a></div></footer>
+<dialog id="finder" aria-label="Search site"><form method="dialog"><label for="query">Search the site</label><button aria-label="Close search">×</button></form><input type="search" id="query" placeholder="Search roles, projects, or papers"><ul id="results"></ul></dialog></body></html>
